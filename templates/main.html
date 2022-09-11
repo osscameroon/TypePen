@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<header>
+    <div class="title-box">
+        <h1 class="title">TypePen</h1>
+        <p>A Minimalistic Notepad made just for you! </p>
+    </div>
+</header>
+
+
+<div class="welcome-screen-box">
+    <div class="options-box">
+        <button type="button" id="new"><a href="{{ url_for('new_note') }}">New</a></button>
+        <button type="button" id="open-files">Open</button>
+        <button type="button" id="">Settings</button>
+        <button type="button" id="">Help</button>
+    </div>
+</div>
+
+<div class="welcome-screen-box recent-notes-box">
+    <h3>Recent Files</h3>
+    <hr>
+
+    <div class="files-box">
+        <!-- <h4>No Recent files</h4> -->
+        {% for filename, last_modified in file_details.items() %}
+        <div class="file-item" id="filebox">
+            <div class="fi">
+                <strong>{{ filename }}</strong>
+                <small>Date modified: {{ last_modified }}</small>
+            </div>
+            <div class="gi" filename-data="{{ dpath }}\\{{ filename }}">
+                <button class="buttons">Delete</button>
+                <button id="edit-button"><a href="/edit/{{ filename }}">Edit</a></button>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
