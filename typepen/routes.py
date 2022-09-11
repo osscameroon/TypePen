@@ -1,11 +1,17 @@
 import os
 import time
 
-from flask import render_template, url_for
+
+from flask import render_template,request
 from typepen import server
 
-PATH_TO_ALL_FILES = "C:\\Users\\HanslettTheDev\\Documents\\loks"
+#open user data directory create one if doen't exist
+PATH_TO_ALL_FILES=os.getenv('APPDATA')+'/typepen'
 
+if not os.path.exists(PATH_TO_ALL_FILES):#check if data directory exist
+    os.makedirs(PATH_TO_ALL_FILES)#create a new data directory
+
+#home
 @server.route('/')
 def home():
     all_dir_files = os.listdir(PATH_TO_ALL_FILES)
@@ -16,25 +22,20 @@ def home():
     
     return render_template('main.html', file_details=file_details, dpath=PATH_TO_ALL_FILES)
 
-@server.route('/new')
-def new_note():
-    return render_template('new_file.html')
 
-@server.route('/new/<file_name>')
-def open_note(file_name:str):
-    with open(os.path.join(PATH_TO_ALL_FILES, file_name)) as file:
-        content = file.read()
-    print(content)
-    return render_template('open_note.html', content=content)
-
-
-@server.route('/edit/<file_name>')
-def edit_notes(file_name:str):
-    with open(os.path.join(PATH_TO_ALL_FILES, file_name), "r") as file:
-        content = file.read()
+@server.route('/editor',methods = ['GET'])
+def edit_notes():
+    content=str()
+    filename=str()
+    if request.method=='GET':
+        if "open" in request.form.keys():
+            try:
+                with open(os.path.join(PATH_TO_ALL_FILES, file_name), "r") as file:
+                    content = file.read()
+                    filename=request.form["open"]
+            except:
+                print("cannot open %s"%filename)
+    else :
+        content='add some content here'
+        print('new file will be created')
     return render_template('edit.html', content=content)
-
-
-# @server.route('/delete/<file_name>')
-# def delete_note():
-#     return

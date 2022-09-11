@@ -1,6 +1,7 @@
 {% extends 'layout.html' %}
-
-{% block content %}
+{%block style%}     <link rel="stylesheet" href="{{ url_for('static', filename='css/edition.css') }}" />
+{% endblock %}
+{% block content %} 
 
 <div class="main-container">
     <div id="loader" class="loading-container">

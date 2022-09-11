@@ -1,0 +1,20 @@
+.text-content
+{
+    
+    border-radius: 10px;
+    overflow-x: auto;
+    overflow-y: auto;
+    opacity: 0.5;
+}
+
+.text-content:hover
+{
+    opacity: 1;
+}
+button
+{
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #eee;
+    background-color: white;
+}
