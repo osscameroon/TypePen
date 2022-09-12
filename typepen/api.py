@@ -27,7 +27,7 @@ class API:
         
         if os.path.exists(file_path[0]):
             with open(file_path[0], "r") as file:
-                return (file_path[0].split('\\')[-1], file.read())
+                return file_path[0]
 
     def delete_file(self, file_url:str):
         os.remove(os.path.join(file_url))

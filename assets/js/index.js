@@ -29,8 +29,8 @@ buttons.forEach((button) => {
 openBtn.addEventListener('click', (e) =>{
   pywebview.api.open_file().then( (response) => {
     console.log(response)
-    // place_text(response);
-    window.location.assign('/new/' + response[0])
+    window.location.assign('/editor?open=' + response[0])
+    
   })
 })
 

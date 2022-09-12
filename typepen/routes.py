@@ -28,11 +28,13 @@ def edit_notes():
     content=str()
     filename=str()
     if request.method=='GET':
-        if "open" in request.form.keys():
+        print(request.form)
+        if "open" in request.args.keys():
+            filename=request.args.get("open")
             try:
-                with open(os.path.join(PATH_TO_ALL_FILES, file_name), "r") as file:
-                    content = file.read()
-                    filename=request.form["open"]
+                print(filename)
+                with open(os.path.join(PATH_TO_ALL_FILES, filename), "r") as file:
+                    content = file.read()     
             except:
                 print("cannot open %s"%filename)
     else :
