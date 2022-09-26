@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="main-container">
+    <div id="loader" class="loading-container">
+        <div class="loader">Loading...</div>
+    </div>
+
+    <div id="main" class="loaded-container">
+        <button type="button" id="back"><a href="{{ url_for('home') }}">Back</a></button>
+        <div class="text-content">
+            {{ content|safe }}
+        </div>
+        <div class="button-container" id="buttons">
+            <button id="bold1" class="btn">B</button>
+            <button class="btn" id="ita">I</button>
+            <button class="btn" id="underline-btn">U</button>
+            <button id="save-text">Save Note</button>
+        </div>
+    </div>
+</div>
+
+<!-- <button></button> -->
+
+
+{% endblock %}
