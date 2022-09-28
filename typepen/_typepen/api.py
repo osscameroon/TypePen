@@ -4,10 +4,10 @@ import os
 
 class API:
     def testq(self):
-        webview.create_window("Create Note", server)
-        # for window in webview.windows:
-        #     if window.title == "TypePen":
-        #         window.destroy()
+        # webview.create_window("Create Note", server)
+        for window in webview.windows:
+            if window.title == "TypePen":
+                window.destroy()
 
     def testqq(self):
         webview.windows[0].minimize()
