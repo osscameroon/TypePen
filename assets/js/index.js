@@ -2,6 +2,16 @@ const fileBox = document.getElementById("filebox");
 const editBtn = document.getElementById("edit-button");
 const openBtn = document.getElementById("open-files");
 const buttons = document.querySelectorAll(".buttons");
+const closeBtn = document.getElementById('close-btn');
+const minBtn = document.getElementById('min-btn');
+
+function test() {
+  pywebview.api.testq()
+}
+
+function test2() {
+  pywebview.api.testqq();
+}
 
 setTimeout(function () {
   document.getElementById("loader").style.display = "none";

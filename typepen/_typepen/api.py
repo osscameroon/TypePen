@@ -1,7 +1,17 @@
 import webview
+from typepen._typepen import server
 import os
 
 class API:
+    def testq(self):
+        webview.create_window("Create Note", server)
+        # for window in webview.windows:
+        #     if window.title == "TypePen":
+        #         window.destroy()
+
+    def testqq(self):
+        webview.windows[0].minimize()
+
     def get_file_details(self, file_details:str):
         print(file_details)
         return "details received"
@@ -24,7 +34,7 @@ class API:
         window.hide()
         file_path = window.create_file_dialog(webview.OPEN_DIALOG, file_types=file_types)
         window.destroy()
-        
+
         if os.path.exists(file_path[0]):
             with open(file_path[0], "r") as file:
                 return (file_path[0].split('\\')[-1], file.read())

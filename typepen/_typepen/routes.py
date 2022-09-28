@@ -2,7 +2,7 @@ import os
 import time
 
 from flask import render_template, url_for
-from typepen import server
+from typepen._typepen import server
 
 PATH_TO_ALL_FILES = "C:\\Users\\HanslettTheDev\\Documents\\loks"
 
