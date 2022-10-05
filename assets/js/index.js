@@ -5,12 +5,16 @@ const buttons = document.querySelectorAll(".buttons");
 const closeBtn = document.getElementById('close-btn');
 const minBtn = document.getElementById('min-btn');
 
-function test() {
-  pywebview.api.testq()
+function exitWindow() {
+  pywebview.api.close_window();
 }
 
-function test2() {
-  pywebview.api.testqq();
+function minimizeWindow() {
+  pywebview.api.minimize_window();
+}
+
+function newWindow() {
+  pywebview.api.new_window();
 }
 
 setTimeout(function () {
