@@ -17,7 +17,7 @@ a {
 }
 
 .title, .bar-title p {
-    font-family: "Montserrat_Alternates";
+    font-family: "Montserrat_Alternates", sans-serif;
 }
 
 .min, .close {
@@ -116,7 +116,148 @@ a {
     transform: scale3d(1.1, 1.1, 1.1);
 }
 
-/* AnImatIons */
+
+
+/* NEW FILE PAGE */
+
+#text-editor {
+    width: auto;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+.top-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.top-container input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid rgba(0, 0, 0, 0.488);
+    outline: none;
+}
+
+.top-container input:focus {
+    border: 2px solid #E94560;
+}
+
+.top-container button {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    min-height: 45px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: black;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.top-container button:hover {
+    background-color: rgba(0, 0, 0, 0.442);
+}
+
+.editor-container {
+    margin-top: 30px;   
+}
+
+.text-content {
+    min-height: 400px;
+    width: 100%;
+    font-size: normal;
+    border-left: 3px solid rgba(0, 0, 0, 0.519);
+    padding: 8px;
+    border-radius: 5px;
+    cursor: text;
+    text-align: start;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+.text-content:focus {
+    outline: none;
+}
+
+/* .drag-box {
+    cursor: move;
+    background-color: white;
+    padding: 10px;
+    z-index: 10;
+} */
+
+footer {
+    position: fixed;
+    height: 70px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    padding: 20px;
+}
+
+.button-box {
+    left: 0;
+    margin-right: 10px;
+    bottom: 0;
+    width: fit-content;
+    background-color: rgba(220, 220, 220, 0.511);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container button {
+    min-height: 45px;
+    min-width: 45px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.386);
+    margin-left: 5px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.button-container button:focus {
+    outline: 1px solid rgba(255, 0, 0, 0.313);
+}
+
+/* Footer */
+
+.aria {
+    position: absolute;
+    right: 0;
+    margin-right: 3%;
+}
+
+.aria button {
+    min-height: 50px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #E94560;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Montserrat_Alternates', sans-serif;
+}
 
 /* Animations */
 .main-container {
