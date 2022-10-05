@@ -1,16 +1,40 @@
 import webview
-from typepen._typepen import server
 import os
 
-class API:
-    def testq(self):
-        webview.create_window("Create Note", server)
-        # for window in webview.windows:
-        #     if window.title == "TypePen":
-        #         window.destroy()
+html = '''
+<div class="main-container">
+    <div id="loader" class="loading-container">
+        <div class="loader">Loading...</div>
+    </div>
 
-    def testqq(self):
+    <div id="main" class="loaded-container">
+        <button type="button" id="back"><a href="{{ url_for('home') }}">Back</a></button>
+<div class="text-content" contenteditable="true"></div>
+<div class="button-container" id="buttons">
+    <button id="bold1" class="btn" >B</button>
+    <button class="btn" id="ita">I</button>
+    <button class="btn" id="underline-btn">U</button>
+    <button id="save-text">Save Note</button>
+</div>
+    </div>
+</div>
+
+'''
+
+class API:
+    def close_window(self):
+        # webview.windows[0].destroy()
+        # destroy all webview windows 
+        for window in webview.windows:
+            window.destroy()
+
+    def minimize_window(self):
         webview.windows[0].minimize()
+    
+    def new_window(self):
+        window2 = webview.create_window('TypePen - New Note', width=900, height=700, min_size=(700,690))
+        window2.load_url(webview.windows[0].get_current_url() + "/new")
+
 
     def get_file_details(self, file_details:str):
         print(file_details)
@@ -41,6 +65,5 @@ class API:
 
     def delete_file(self, file_url:str):
         os.remove(os.path.join(file_url))
-
         if not os.path.exists(os.path.join(file_url)):
             return "Deleted"

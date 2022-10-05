@@ -24,11 +24,11 @@ python app.py
 
 ### `Main Application Window`
 
-![Main Application Window](/images/Untitled.png)
+![Main Application Window](assets/images/main_window.jpg)
 
 ### `Notetaking route`
 
-![Main Application Window](/images/Untitled2.png)
+![Main Application Window](assets/images/Untitled2.png)
 
 ### AUTHOR
 #### [HanslettTheDev](https://github.com/HanslettTheDev)
