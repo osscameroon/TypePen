@@ -1,7 +1,6 @@
 import webview
 from typepen._typepen import server
 from typepen._typepen.api import API
-from typepen.interface_windows.create_window import CreateWindow
 
 if __name__ == '__main__':
     api = API()
