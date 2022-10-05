@@ -28,7 +28,7 @@ python app.py
 
 ### `Notetaking route`
 
-![Main Application Window](assets/images/Untitled2.png)
+![Main Application Window](assets/images/open_window.jpg)
 
 ### AUTHOR
 #### [HanslettTheDev](https://github.com/HanslettTheDev)
