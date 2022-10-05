@@ -2,6 +2,7 @@ import webview
 from typepen._typepen import server
 from typepen._typepen.api import API
 
+
 if __name__ == '__main__':
     api = API()
     # app = CreateWindow(server=server, debug=True, width=642, height=300, window_frame=True, js_api=api)
