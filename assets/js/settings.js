@@ -8,7 +8,6 @@ function sleep(ms) {
 }
 
 window.addEventListener("pywebviewready", function () {
-	console.log("pywebviewready")
 	pywebview.api.load_settings().then((resp) => {
 		let items = resp;
 
