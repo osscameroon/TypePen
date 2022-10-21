@@ -1,0 +1,27 @@
+/* Dark mode */
+
+.dark-mode {
+    background-color: black;
+}
+
+.top-container .d-input {
+    border: 2px solid rgba(255, 255, 255, 0.488);
+    color: white;
+    background-color: black;
+}
+
+.top-container .d-btn {
+    background: white;
+    color: black;
+    border: 1px solid white;
+}
+
+.top-container .d-btn:hover {
+    background-color: rgba(255, 255, 255, 0.856);
+}
+
+.d-text-content {
+    background-color: rgb(60, 60, 60);
+    color: white;
+    border-left: 3px solid rgba(255, 255, 255, 0.569);
+}

@@ -17,14 +17,14 @@
     <h1 class="title">TypePen</h1>
     <div class="options-box">
         <button type="button" id="new" onclick="newWindow()">New</button>
-        <button type="button" id="open-files">Open</button>
-        <button type="button" id="">Settings</button>
-        <button type="button" id="">Help</button>
+        <button type="button" id="open-files" onclick="openFiles()">Open</button>
+        <button type="button" id="settings-btn" onclick="openSettings()">Settings</button>
+        <button type="button" id="" onclick="openHelp()">Help</button>
     </div>
     
 </div>
 <p>A Minimalistic Notepad made just for you! </p>
-<!-- <div class="welcome-screen-box recent-notes-box">
+<div class="welcome-screen-box recent-notes-box">
     <h3>Recent Files</h3>
     <hr>
 
@@ -43,5 +43,5 @@
         </div>
         {% endfor %}
     </div>
-</div> -->
+</div>
 {% endblock %}

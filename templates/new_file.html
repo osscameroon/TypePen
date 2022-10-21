@@ -2,41 +2,44 @@
 
 {% block content %}
 
-<!-- <div class="main-container">
+<div id="main-animate" class="main-container">
     <div id="loader" class="loading-container">
         <div class="loader">Loading...</div>
     </div>
 
     <div id="main" class="loaded-container">
-        
-    </div>
-</div> -->
-<div id="text-editor">
-    <div class="top-container">
-        <input type="text" placeholder="Enter title" name="" id="">
-        <button>Dark Mode</button>
-    </div>
-
-    <div class="editor-container" id="buttons">
-        <div class="text-content" contenteditable="true"></div>
-    </div>
-
-
-
-</div>
-
-<footer>
-    <div class="button-box">
-        <div class="button-container">
-            <button id="bold1" class="btn">B</button>
-            <button class="btn" id="ita">I</button>
-            <button class="btn" id="underline-btn">U</button>
-            <div class="aria">
-                <button id="save-text">Save</button>
+        <div id="text-editor">
+            <div class="top-container">
+                <input id="title-input" type="text" placeholder="Enter title">
+                <button type="button" id="darkmode">Dark Mode</button>
             </div>
+
+            <div class="editor-container" id="buttons">
+                <div id="text-box" class="text-content" contenteditable="true">
+                    {% if window_type == "new" %}
+
+                    {% else %}
+                    {{ content|safe }}
+                    {% endif %}
+                </div>
+            </div>
+
         </div>
+
+        <footer>
+            <div class="button-box">
+                <div class="button-container">
+                    <button id="bold1" class="btn" type="button">B</button>
+                    <button class="btn" id="ita" type="button">I</button>
+                    <button class="btn" id="underline-btn" type="button">U</button>
+                    <div class="aria">
+                        <button id="save-text">Save</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-</footer>
+</div>
 
 
 

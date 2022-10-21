@@ -1,0 +1,14 @@
+from os.path import expanduser, join
+
+CF_NAME = r"config.ini"
+
+CF_SETTING_NAMES = ["TypePenSettings"]
+
+DSL_FOLDER_NAME = "TypePen Notes"
+
+DEFAULT_STORAGE_LOCATION = join(expanduser('~'), "Documents", DSL_FOLDER_NAME)
+
+CF_DEFAULT = {
+    "autosave": "false",
+    "save_location": DEFAULT_STORAGE_LOCATION,
+}

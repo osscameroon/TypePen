@@ -24,8 +24,7 @@ def new_note():
 def open_note(file_name:str):
     with open(os.path.join(PATH_TO_ALL_FILES, file_name)) as file:
         content = file.read()
-    print(content)
-    return render_template('open_note.html', content=content)
+    return render_template('new_file.html', content=content)
 
 
 @server.route('/edit/<file_name>')
@@ -35,6 +34,6 @@ def edit_notes(file_name:str):
     return render_template('edit.html', content=content)
 
 
-# @server.route('/delete/<file_name>')
-# def delete_note():
-#     return
+@server.route('/settings')
+def typepen_settings():
+    return render_template('settings.html')
