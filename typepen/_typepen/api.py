@@ -81,7 +81,9 @@ class API:
 			return file_path[0].split('\\')[-1]
 	
 	def open_file_window(self, file_name:str):
-		window = webview.create_window(f'TypePen - {file_name}', width=900, height=700, min_size=(700,690))
+		window = webview.create_window(f'TypePen - {file_name}', 
+		width=config.NEW_WIN_SIZE[0], height=config.NEW_WIN_SIZE[1], min_size=config.MIN_WIN_SIZE)
+		
 		window.load_url(self.windows[0].get_current_url() + f"/new/{file_name}")
 
 
@@ -91,5 +93,5 @@ class API:
 			return True
 
 	def settings_window(self):
-		window = webview.create_window("TypePen - Settings", width=450, height=300, resizable=False, js_api=API())
+		window = webview.create_window("TypePen - Settings", width=config.SETTINGS_WIN_SIZE[0], height=config.SETTINGS_WIN_SIZE[1], resizable=False, js_api=API())
 		window.load_url(self.windows[0].get_current_url() + "/settings")
