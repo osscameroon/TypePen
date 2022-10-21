@@ -31,7 +31,7 @@ class API:
 	def save_file(self, file_name:str, info:str) -> str:
 		window = webview.create_window("")
 		window.hide()
-                file_dialog = webview.SAVE_DIALOG, save_filename=f"{file_name}.typen"
+		file_dialog = webview.SAVE_DIALOG, save_filename=f"{file_name}.typen"
 		if (file_path := window.create_file_dialog(file_dialog)) is not None :
 			with open(file_path, "w") as file:
 				file.write(info)
@@ -44,8 +44,6 @@ class API:
 		''' This function can be scalled but for now it will use the hardcoded settings value '''
 		# The state is used for the toggle on and off button 
 		# the settings variable will be used only for options which need to pass some extra data
-
-		print(new_settings)
 
 		if new_settings:
 			self.typepen_config.update_config_file("TypePenSettings", new_settings)
