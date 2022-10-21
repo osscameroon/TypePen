@@ -87,10 +87,11 @@ darkModeBtn.addEventListener('click', (e) => {
 
 // Button Utilities
 function buttonUtilities(e) {
-	if (e.target.classList.contains("active")){
-		e.target.classList.remove("active")
+        const btnClassList = e.target.classList;
+	if (btnClassList.contains("active")){
+		btnClassList.remove("active")
 	} else {
-		e.target.classList.toggle("active")
+		btnClassList.toggle("active")
 	}
 }
 
