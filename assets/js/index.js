@@ -114,11 +114,7 @@ buttons.forEach((button) => {
 
 // button functions
 function newWindow() {
-  pywebview.api.new_window().then((response) => {
-    if (response === false) {
-      alert("You can't open more than 2 TypePen windows!");
-    }
-  });
+  pywebview.api.new_window().then(response => !response && alert("You can't open more than 2 TypePen windows!"));
 }
 
 function openFiles() {
