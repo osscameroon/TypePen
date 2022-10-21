@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <style>
+        .btn {
+            min-height: 50px;
+            font-size: 20px;
+            margin-left: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid rgb(197, 67, 89);
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            transition: ease-in 0.3s;
+            background-color: #F5EDDC;
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        #info-box {
+            color: rgb(42, 206, 42);
+            font-size: 17px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>TypePen Settings <span id="info-box"></span></h3>
+
+    <ol style="font-size: 18px;">
+        <li>
+        Default Storage Location <br>
+        <div class="stlocation">
+             <input type="text" value="No default path selected" style="width: 100%" name="path" id="path-input" disabled><br>
+            <button id="filepathbtn">Choose location</button>
+        </div>
+       
+    </li>
+
+        <li>
+            Auto Save files <br>
+            <div class="radios">
+                <label for="autosave-on">On
+                    <input type="radio" name="autosave" id="autosave-on" value="on">
+                </label>
+                <label for="autosave-off">Off
+                    <input type="radio" name="autosave" id="autosave-off" value="off">
+                </label>
+
+            </div>
+
+        </li>
+    </ol>
+
+    <button type="submit" class="btn" id="save-settings">Save settings</button>
+
+    <script src="{{ url_for('static', filename='js/settings.js') }}"></script>
+</body>
+
+</html>
