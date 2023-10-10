@@ -2,3 +2,4 @@ env
 __pycache__
 interface_windows
 config.ini
+vue-boilerplate

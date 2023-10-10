@@ -4,7 +4,10 @@ import time
 from flask import render_template, url_for
 from typepen._typepen import server
 
-PATH_TO_ALL_FILES = "C:\\Users\\HanslettTheDev\\Documents\\loks"
+PATH_TO_ALL_FILES = "C:\\Users\\Dell\\Documents\\loks"
+
+if not os.path.exists(PATH_TO_ALL_FILES):
+    os.mkdir(PATH_TO_ALL_FILES)
 
 @server.route('/')
 def home():

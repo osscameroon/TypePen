@@ -9,6 +9,7 @@ const darkModeBtn = document.getElementById('darkmode');
 const textFormatButtons = document.querySelectorAll('.btn');
 const titleInput = document.getElementById('title-input');
 const textBox = document.getElementById('text-box');
+// const 
 
 // Loading animation
 // I want the class to be removed when the animation stops(Synchronously)
@@ -138,16 +139,16 @@ function minimizeWindow() {
 
 
 
-// saveBtn.addEventListener("click", function () {
-//   let fileName = prompt("Enter File Name ");
-//   if (fileName) {
-//     let textInfo = textConts.innerHTML;
-//     pywebview.api.save_file(fileName, textInfo).then((response) => {
-//       if (response == "Saved") {
-//         alert("File Saved Succesfully");
-//       } else {
-//         alert("Something went wrong");
-//       }
-//     });
-//   }
-// });
+saveBtn.addEventListener("click", function () {
+  let fileName = prompt("Enter File Name ");
+  if (fileName) {
+    let textInfo = textConts.innerHTML;
+    pywebview.api.save_file(fileName, textInfo).then((response) => {
+      if (response == "Saved") {
+        alert("File Saved Succesfully");
+      } else {
+        alert("Something went wrong");
+      }
+    });
+  }
+});
